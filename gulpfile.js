@@ -14,11 +14,12 @@ const zip = require('gulp-zip');
 
 const name = path.basename(path.resolve('.'));
 const sourceDirectory = './src';
-const distDirectory = '../../OneDrive/Rol/Foundryvtt/Data/modules/token-attractor';
+const distDirectory = './module';
 const stylesDirectory = `${sourceDirectory}/styles`;
+const languagesDirectory = `${sourceDirectory}/lang`;
 const stylesExtension = 'css';
 const sourceFileExtension = 'ts';
-const staticFiles = ['assets', 'fonts', 'lang', 'packs', 'templates', 'module.json'];
+const staticFiles = ['assets', 'fonts', 'lang', 'packs', 'templates', 'module.json', 'lang'];
 
 /********************/
 /*      BUILD       */
@@ -36,9 +37,15 @@ async function buildCode() {
  * Build style sheets
  */
 function buildStyles() {
-  console.log(`${stylesDirectory}/${name}.${stylesExtension}`);
-  console.log(`${distDirectory}/styles`);
   return gulp.src(`${stylesDirectory}/${name}.${stylesExtension}`).pipe(gulp.dest(`${distDirectory}/styles`));
+}
+
+/**
+ * Copy lang files
+ */
+function copyLangFiles() {
+  console.log(languagesDirectory);
+  return gulp.src(`${languagesDirectory}/**/.*`).pipe(gulp.dest(`${distDirectory}/lang`));
 }
 
 /**
@@ -58,6 +65,7 @@ async function copyFiles() {
 function buildWatch() {
   gulp.watch(`${sourceDirectory}/**/*.${sourceFileExtension}`, { ignoreInitial: false }, buildCode);
   gulp.watch(`${stylesDirectory}/**/*.${stylesExtension}`, { ignoreInitial: false }, buildStyles);
+  gulp.watch(`${languagesDirectory}/**/*.*`, { ignoreInitial: false }, copyLangFiles);
   gulp.watch(
     staticFiles.map((file) => `${sourceDirectory}/${file}`),
     { ignoreInitial: false },

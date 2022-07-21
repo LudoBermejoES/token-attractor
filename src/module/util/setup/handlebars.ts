@@ -1,5 +1,3 @@
-import { TEMPLATES_FOLDER } from '../constants';
-
 export function registerHelpers(): void {
   Handlebars.registerHelper('gurpslink', GURPS.gurpslink);
   Handlebars.registerHelper('isEmptyString', (string: string) => string === '');
@@ -9,8 +7,4 @@ export function registerHelpers(): void {
     // @ts-ignore
     return arg1 == arg2 ? options.fn(this) : options.inverse(this);
   });
-}
-
-export async function registerPartials(): Promise<void> {
-  Handlebars.registerPartial('choiceTable', await getTemplate(`${TEMPLATES_FOLDER}/partials/choiceTable.hbs`));
 }
