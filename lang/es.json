@@ -1,0 +1,12 @@
+{
+    "tokenAttractor.settings.isAttractor": "El token es un atractor",
+    "tokenAttractor.callForRoll.dialogTitle": "¡El vórtice te atrapa!",
+    "tokenAttractor.callForRoll.dialogDescription": "¡El vórtice está tirando de ti! Haz una tirada para ver si logras zafarte de su fuerza",
+    "tokenAttractor.callForRoll.dialogButton": "Haz la tirada",
+    "tokenAttractor.settings.distanceAttraction": "Distancia en la que empezará a atraer",
+    "tokenAttractor.settings.maxForceAttraction": "Máxima velocidad de atracción",
+    "tokenAttractor.settings.minForceAttraction": "Mínima velocidad de atracción",
+    "tokenAttractor.settings.minModifier": "Penalizador mínimo a la tirada",
+    "tokenAttractor.settings.maxModifier": "Penalizador máximo a la tirada",
+    "tokenAttractor.settings.isAttracted": "El token es atraido por atractores"
+}

@@ -1,12 +1,12 @@
 import { MODULE_NAME } from '../constants.js';
 
 export function registerSettings(): void {
-  game.settings.register(MODULE_NAME, 'st-characteristic', {
+  game.settings.register(MODULE_NAME, 'only-in-combat', {
     scope: 'world',
-    type: String,
-    default: 'data.ST.val',
-    name: 'What characteristic we are looking for Strenght',
-    hint: 'Streght value to check the amount of space the token will move',
+    type: Boolean,
+    default: true,
+    name: 'Only attract in combat',
+    hint: 'The vortex will only attract tokens when they are in combat mode',
     config: true,
   });
 }

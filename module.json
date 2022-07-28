@@ -1,30 +1,40 @@
 {
   "name": "token-attractor",
   "title": "Token attractor",
-  "description": "",
-  "version": "0.0.1",
-  "author": "Ludo Bermejo",
-  "minimumCoreVersion": "0.8.8",
-  "compatibleCoreVersion": "0.8.9",
-  "scripts": [],
+  "description": "An easy way to build vortexes (with rolls)",
+  "version": "0.0.3",
+  "authors": [
+    {
+      "name": "Ludo Bermejo",
+      "email": "LudoBermejo@gmail.com"
+    }
+  ],
+  "minimumCoreVersion": "9",
+  "compatibleCoreVersion": "9",
   "esmodules": ["module/token-attractor.js"],
   "styles": ["styles/token-attractor.css"],
-  "packs": [],
+  "dependencies": [
+    {
+      "name": "socketlib"
+    }
+  ],
   "languages": [
     {
       "lang": "en",
       "name": "English",
       "path": "lang/en.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
     }
   ],
   "socket": true,
-  "url": "https://github.com/LudoBermejoES/token-attractor",
-  "manifest": "https://raw.githubusercontent.com/LudoBermejoES/token-attractor/master/src/module.json",
-  "download": "https://github.com/LudoBermejoES/token-attractor/releases/latest/download/dist.zip",
+  "url": "https://github.com/ludobermejoes/token-attractor",
+  "manifest": "https://raw.githubusercontent.com/ludobermejoes/token-attractor/master/src/module.json",
+  "download": "https://github.com/ludobermejoes/token-attractor/releases/latest/download/dist.zip",
   "license": "",
-  "readme": "https://github.com/LudoBermejoES/token-attractor/blob/master/README.md",
-  "bugs": "",
-  "changelog": "",
-  "system": ["gurps"],
+  "readme": "https://github.com/ludobermejoes/token-attractor/blob/master/README.md",
   "library": false
 }

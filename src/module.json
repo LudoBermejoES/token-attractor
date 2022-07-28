@@ -1,19 +1,21 @@
 {
   "name": "token-attractor",
-  "title": "GURPS Easy Combat",
-  "description": "",
+  "title": "Token attractor",
+  "description": "An easy way to build vortex",
   "version": "0.0.3",
-  "author": "danielrab",
-  "minimumCoreVersion": "0.8.8",
-  "compatibleCoreVersion": "0.8.9",
-  "scripts": [],
+  "authors": [
+    {
+      "name": "Ludo Bermejo",
+      "email": "LudoBermejo@gmail.com"
+    }
+  ],
+  "minimumCoreVersion": "9",
+  "compatibleCoreVersion": "9",
   "esmodules": ["module/token-attractor.js"],
   "styles": ["styles/token-attractor.css"],
-  "packs": [],
   "dependencies": [
     {
-      "name": "socketlib",
-      "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/v1.0.9/module.json"
+      "name": "socketlib"
     }
   ],
   "languages": [
@@ -21,6 +23,11 @@
       "lang": "en",
       "name": "English",
       "path": "lang/en.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
     }
   ],
   "socket": true,
@@ -29,8 +36,5 @@
   "download": "https://github.com/ludobermejoes/token-attractor/releases/latest/download/dist.zip",
   "license": "",
   "readme": "https://github.com/ludobermejoes/token-attractor/blob/master/README.md",
-  "bugs": "",
-  "changelog": "",
-  "system": ["gurps"],
   "library": false
 }
